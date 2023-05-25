@@ -2,14 +2,18 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { Button, Container } from '@mui/material'
+import { NavBar } from './common/NavBar'
 
 function App() {
 	return (
-		<Container maxWidth="xl">
-			<Button fullWidth variant="contained">
-				Hola Mundo
-			</Button>
-		</Container>
+		<div>
+			<NavBar />
+			<Container sx={{ mt: 9 }} maxWidth="xl">
+				<Button fullWidth variant="contained">
+					Hola Mundo
+				</Button>
+			</Container>
+		</div>
 	)
 }
 
