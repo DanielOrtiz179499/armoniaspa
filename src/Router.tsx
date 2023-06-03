@@ -7,7 +7,7 @@ export const AppRouter: React.FC<{}> = () => {
 	return (
 		<Routes>
 			<Route path="/" element={<RouterLayout />}>
-				<Route path="/armoniaspa/" element={<HomePage />} />
+				<Route path="/armoniaspa/home" element={<HomePage />} />
 				<Route path="/armoniaspa/login" element={<LoginPage />} />
 			</Route>
 			<Route path="/nose" element={<div>Hola</div>} />
