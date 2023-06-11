@@ -47,7 +47,7 @@ export const HomePage: React.FC<{}> = () => {
             ))}
           </Grid>
         ) : (
-          ''
+          'prueba'
         )}
       </div>
     </Container>
