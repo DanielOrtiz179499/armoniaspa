@@ -15,7 +15,7 @@ export const NavBar: React.FC<{}> = () => {
   const navigate = useNavigate()
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+      <AppBar position="sticky">
         <Toolbar>
           <Container maxWidth="xl">
             <Grid
