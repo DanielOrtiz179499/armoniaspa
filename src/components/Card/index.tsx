@@ -23,7 +23,7 @@ export const CardComponent: React.FC<CardProps> = ({
   status,
 }) => {
   return (
-    <Card>
+    <Card sx={{ maxWidth: 345 }}>
       <CardMedia component="img" height="194" image={image} alt="paella dish" />
       <CardContent>
         <Typography variant="h4" sx={{ mb: 1.5 }}>
