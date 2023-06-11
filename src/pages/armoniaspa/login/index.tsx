@@ -9,7 +9,6 @@ import {
 } from '@mui/material'
 import React from 'react'
 import { useNotification } from '../../../context/notification.context'
-import { error } from 'console'
 import { LoginValidate } from '../../../utils/validateForm'
 
 type LoginType = {
