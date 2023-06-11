@@ -34,7 +34,7 @@ export const HomePage: React.FC<{}> = () => {
       <div>
         {allCharacters?.length !== 0 ? (
           <Grid container spacing={2} direction="row">
-            {allCharacters!.map((character) => (
+            {allCharacters?.map((character) => (
               <Grid item xs={3}>
                 <CardComponent
                   key={character.id}
