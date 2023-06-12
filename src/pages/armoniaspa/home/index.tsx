@@ -5,7 +5,6 @@ import {
   Container,
   Grid,
   Pagination,
-  Stack,
 } from '@mui/material'
 import React from 'react'
 import { CardComponent, HeaderComponent } from '../../../components'
