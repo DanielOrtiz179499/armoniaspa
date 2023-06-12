@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="JcYlRr5xBGq-pKlCf1Mg" name="Page-1">
-        <mxGraphModel dx="576" dy="300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="576" dy="472" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Clase 6&lt;br&gt;- Crear componente HeaderComponent&lt;br&gt;- Que reciba tres parametros, dos obligatorios y uno opcional&lt;br&gt;- El opcional debe ser un componente" style="rounded=0;whiteSpace=wrap;html=1;align=left;" vertex="1" parent="1">
-                    <mxGeometry x="20" y="20" width="530" height="220" as="geometry"/>
+                <mxCell id="2" value="React &amp;amp; TypeScript con Material UI&lt;br&gt;&lt;br&gt;Clase 1&lt;br&gt;Creación de proyecto&lt;br&gt;npx create-react-app &quot;nombreProyecto&quot; --template typescript&lt;br&gt;&lt;br&gt;Clase 2&lt;br&gt;- Customización de componentes (paletas de colores, contenedores, componentesm tipografia, etc&lt;br&gt;&lt;br&gt;Clase 3&lt;br&gt;- Creación de rutas para permitir proveer layout estatico en nuestra aplicación&lt;br&gt;- Router.tsx que nos permita hacer el manejo de rutas&lt;br&gt;- Importar el manejo de rutas en nuestro componente app&lt;br&gt;crear un componente RouteLayout.tsx que nos permita manejar rutas junto a componentes estaticos&lt;br&gt;&lt;br&gt;Clase 4&lt;br&gt;- Login y text field&lt;br&gt;- Creación de pagina login donde se realizara lo siguiente&lt;br&gt;- acomodar los componentes container y grid&lt;br&gt;- creacióin de campos requeridos en los text fields&lt;br&gt;- crear un objeto de información con email y contraseña a travez de un estado que se ejecute con el submit del formulario&lt;br&gt;&lt;br&gt;Clase 5&lt;br&gt;- Context APi y UseNotification&lt;br&gt;- Customizar nuestro alert&lt;br&gt;- Crear un componente llamado cusomsnackbar el cual implementaremos nuestras notificaciones personalziadas&lt;br&gt;- crear nuestro provider y probarlo&lt;br&gt;&lt;br&gt;Clase 6&lt;br&gt;- Crear componente HeaderComponent&lt;br&gt;- Que reciba tres parametros, dos obligatorios y uno opcional&lt;br&gt;- El opcional debe ser un componente&lt;br&gt;&lt;br&gt;Clase 7&lt;br&gt;- Conexión a API&lt;br&gt;- Crear unstancia de axios&lt;br&gt;- obtener los datos por consola&lt;br&gt;- diagramar los datos&lt;br&gt;- Paginación" style="rounded=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="20" y="20" width="530" height="660" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

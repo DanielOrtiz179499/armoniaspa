@@ -1,24 +1,42 @@
-import { Button, Container, Grid } from '@mui/material'
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Container,
+  Grid,
+  Pagination,
+  Stack,
+} from '@mui/material'
 import React from 'react'
 import { CardComponent, HeaderComponent } from '../../../components'
 import { characters } from '../../../api/characters'
 import { TypeCharacter } from './interface/character.interface'
 
 export const HomePage: React.FC<{}> = () => {
+  const [page, setPage] = React.useState(1)
+  const [count, setCount] = React.useState(1)
   const [allCharacters, setAllCharacters] = React.useState<
     TypeCharacter[] | null
   >(null)
+  const [loading, setLoading] = React.useState<boolean>(true)
+
+  const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    setPage(value)
+  }
 
   React.useEffect(() => {
+    setLoading(true)
     characters
-      .getAll({ page: 1 })
+      .getAll({ page })
       .then((r) => {
+        setCount(r.data.info.pages)
         setAllCharacters(r.data.results)
+        setTimeout(() => setLoading(false), 1000)
       })
       .catch((e) => {
         console.error(e)
       })
-  }, [])
+  }, [page])
 
   return (
     <Container maxWidth="xl">
@@ -31,25 +49,46 @@ export const HomePage: React.FC<{}> = () => {
           </Button>
         }
       />
-      <div>
-        {allCharacters?.length !== 0 ? (
-          <Grid container spacing={2} direction="row">
-            {allCharacters?.map((character) => (
-              <Grid item xs={3}>
-                <CardComponent
-                  key={character.id}
-                  image={character.image}
-                  name={character.name}
-                  species={character.species}
-                  status={character.status}
-                />
+      {loading ? (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+          <CircularProgress />
+        </Box>
+      ) : (
+        <>
+          <div>
+            {allCharacters?.length !== 0 ? (
+              <Grid sx={{ my: 2 }} container spacing={2} direction="row">
+                {allCharacters?.map((character) => (
+                  <Grid item xs={3}>
+                    <CardComponent
+                      key={character.id}
+                      image={character.image}
+                      name={character.name}
+                      species={character.species}
+                      status={character.status}
+                    />
+                  </Grid>
+                ))}
               </Grid>
-            ))}
-          </Grid>
-        ) : (
-          'prueba'
-        )}
-      </div>
+            ) : (
+              'No data'
+            )}
+          </div>
+          <Box
+            sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}
+          >
+            <Pagination
+              variant="outlined"
+              color="primary"
+              count={count}
+              page={page}
+              onChange={handleChange}
+              sx={{ mb: 3 }}
+              size="large"
+            />
+          </Box>
+        </>
+      )}
     </Container>
   )
 }
